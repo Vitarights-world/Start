@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Start mit Team Solaris</title>
+<style>
+:root{
+  --navy:#1E2D5A;
+  --navy-light:#2A3D70;
+  --white:#FFFFFF;
+  --beige:#F5F0E8;
+  --beige-mid:#E8E2D6;
+  --blue:#4A7FA5;
+  --blue-light:#E4ECF1;
+  --text:#1E2D5A;
+  --text-muted:#5C6B8A;
+  --line:#DCD5C7;
+  --green:#3B7A57;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-size:16px;
+  font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--beige);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER */
+.header{
+  background:var(--navy);
+  color:var(--white);
+  padding:28px 24px 32px;
+  text-align:center;
+}
+.header .eyebrow{
+  font-size:13.5px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#9FB0CE;
+  margin-bottom:10px;
+}
+.header h1{
+  font-size:26px;
+  font-weight:700;
+  line-height:1.3;
+  margin-bottom:10px;
+}
+.header p{
+  font-size:16.5px;
+  color:#C9D3E6;
+  line-height:1.6;
+  max-width:460px;
+  margin:0 auto;
+}
+
+/* WRAP */
+.wrap{
+  max-width:600px;
+  margin:0 auto;
+  padding:28px 18px 60px;
+}
+
+/* CARD */
+.card{
+  background:var(--white);
+  border-radius:var(--radius);
+  border:1px solid var(--beige-mid);
+  padding:24px 22px;
+  margin-bottom:16px;
+}
+.card-eyebrow{
+  font-size:13px;
+  font-weight:700;
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:0.6px;
+  margin-bottom:6px;
+}
+.card h2{
+  font-size:18px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:14px;
+  line-height:1.3;
+}
+
+/* DREI FRAGEN */
+.frage{
+  background:var(--beige);
+  border-radius:10px;
+  padding:14px 16px;
+  margin-bottom:10px;
+  border-left:3px solid var(--blue);
+}
+.frage:last-child{margin-bottom:0}
+.frage .nr{
+  font-size:13px;
+  font-weight:700;
+  color:var(--blue);
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  margin-bottom:4px;
+}
+.frage p{
+  font-size:16px;
+  font-weight:600;
+  color:var(--navy);
+  line-height:1.45;
+}
+.frage .hint{
+  font-size:15.5px;
+  color:var(--text-muted);
+  margin-top:4px;
+  font-weight:400;
+}
+
+/* SCHRITTE */
+.schritt{
+  display:flex;
+  gap:14px;
+  margin-bottom:16px;
+  align-items:flex-start;
+}
+.schritt:last-child{margin-bottom:0}
+.schritt-num{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--white);
+  font-size:15.5px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.schritt-body{}
+.schritt-body strong{
+  display:block;
+  font-size:16px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:3px;
+}
+.schritt-body p{
+  font-size:16.5px;
+  color:var(--text-muted);
+  line-height:1.55;
+}
+.schritt-body a{
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* VISIONBOARD SEKTION */
+.vision-card{
+  background:var(--navy);
+  border-radius:var(--radius);
+  padding:24px 22px;
+  margin-bottom:16px;
+  color:var(--white);
+}
+.vision-card .card-eyebrow{color:#9FB0CE;}
+.vision-card h2{color:var(--white); font-size:18px; font-weight:700; margin-bottom:8px;}
+.vision-card .intro{font-size:15.5px; color:#C9D3E6; line-height:1.6; margin-bottom:18px;}
+
+.vision-img-wrap{
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:8px;
+  position:relative;
+}
+.vision-img-wrap img{
+  width:100%;
+  display:block;
+}
+.vision-caption{
+  font-size:13px;
+  color:#9FB0CE;
+  text-align:center;
+  margin-bottom:18px;
+  font-style:italic;
+}
+
+.vision-wege{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:18px;
+}
+.vision-weg{
+  background:rgba(255,255,255,0.08);
+  border-radius:10px;
+  padding:13px 15px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.vision-weg .weg-icon{
+  font-size:20px;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.vision-weg .weg-body strong{
+  display:block;
+  font-size:16.5px;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:3px;
+}
+.vision-weg .weg-body p{
+  font-size:15.5px;
+  color:#C9D3E6;
+  line-height:1.5;
+}
+
+.vision-teilen{
+  background:rgba(74,127,165,0.25);
+  border-radius:10px;
+  padding:13px 15px;
+  font-size:16.5px;
+  color:#C9D3E6;
+  line-height:1.55;
+  text-align:center;
+}
+.vision-teilen strong{
+  display:block;
+  color:var(--white);
+  font-size:15.5px;
+  margin-bottom:4px;
+}
+
+/* WICHTIGE LINKS */
+.link-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.link-pill{
+  background:var(--blue-light);
+  color:var(--navy);
+  font-size:16px;
+  font-weight:600;
+  padding:9px 16px;
+  border-radius:30px;
+  text-decoration:none;
+  border:1.5px solid var(--line);
+}
+
+/* UPLINE BOX */
+.förderer-box{
+  background:var(--beige);
+  border-radius:10px;
+  padding:16px;
+  margin-top:14px;
+  text-align:center;
+}
+.förderer-box p{
+  font-size:16px;
+  color:var(--text-muted);
+  margin-bottom:6px;
+}
+.förderer-box strong{
+  font-size:16.5px;
+  color:var(--navy);
+  display:block;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:24px;
+  font-size:13.5px;
+  color:var(--text-muted);
+}
+
+@media(max-width:480px){
+  .header h1{font-size:22px;}
+  .wrap{padding:20px 14px 60px;}
+  .card{padding:20px 16px;}
+}
+
+/* ANTWORT-FELDER */
+.antwort-feld{
+  width:100%;
+  margin-top:10px;
+  border:1.5px solid var(--line);
+  background:var(--white);
+  border-radius:10px;
+  padding:11px 14px;
+  font-size:15.5px;
+  font-family:inherit;
+  color:var(--text);
+  outline:none;
+  resize:vertical;
+  min-height:80px;
+  line-height:1.55;
+  transition:border-color .15s;
+}
+.antwort-feld:focus{border-color:var(--blue);}
+
+/* PDF BUTTON */
+.btn-pdf{
+  width:100%;
+  background:var(--navy);
+  color:var(--white);
+  border:none;
+  border-radius:30px;
+  padding:14px 24px;
+  font-size:16.5px;
+  font-weight:600;
+  cursor:pointer;
+  font-family:inherit;
+  transition:background .15s;
+  margin-top:18px;
+  display:block;
+}
+.btn-pdf:hover{background:var(--navy-light);}
+
+
+/* FRAGEBOGEN */
+.btn-aufklappen{
+  width:100%;
+  background:var(--blue-light);
+  color:var(--navy);
+  border:1.5px solid var(--blue);
+  border-radius:30px;
+  padding:13px 24px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  font-family:inherit;
+  transition:all .15s;
+  text-align:center;
+}
+.btn-aufklappen:hover{background:var(--blue); color:var(--white);}
+
+.frage-q{
+  display:flex;
+  gap:14px;
+  margin-bottom:22px;
+  align-items:flex-start;
+  padding-top:18px;
+  border-top:1px solid var(--beige-mid);
+}
+.frage-q:first-child{border-top:none; padding-top:0;}
+.frage-nr{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--white);
+  font-size:14px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.frage-body{flex:1;}
+.frage-text{
+  font-size:15.5px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:10px;
+  line-height:1.4;
+}
+.choices{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+.choice{
+  border:1.5px solid var(--line);
+  background:var(--beige);
+  color:var(--text);
+  padding:9px 16px;
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  transition:all .15s;
+  user-select:none;
+  line-height:1.3;
+}
+.choice:hover{border-color:var(--blue);}
+.choice.selected{
+  background:var(--navy);
+  border-color:var(--navy);
+  color:var(--white);
+  font-weight:600;
+}
+.multi-hint{
+  font-size:13px;
+  color:var(--text-muted);
+  margin-top:6px;
+}
+
+.btn-primary{
+  width:100%;
+  background:var(--navy);
+  color:var(--white);
+  border:none;
+  border-radius:30px;
+  padding:14px 24px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  font-family:inherit;
+  transition:background .15s;
+  margin-top:4px;
+}
+.btn-primary:hover{background:var(--navy-light);}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">Team Solaris · Vitarights</div>
+  <h1>Herzlich willkommen –<br>dein Start beginnt hier</h1>
+  <p>Alles was du für den Start brauchst – Schritt für Schritt, ohne Überforderung.<br>
+  Dein Förderer begleitet dich. Du bestimmst das Tempo.</p>
+</div>
+
+<div class="wrap">
+
+  <!-- DREI STARTFRAGEN -->
+  <div class="card">
+    <div class="card-eyebrow">Schritt 1 – Heute</div>
+    <h2>Drei Fragen, die alles tragen</h2>
+
+    <div class="frage">
+      <div class="nr">Frage 1</div>
+      <p>Was hat dich am Beosigner überzeugt?</p>
+      <div class="hint">Deine Geschichte – die Grundlage für jedes Gespräch mit anderen Menschen.</div>
+      <textarea class="antwort-feld" id="antwort1" placeholder="Schreib hier deine Antwort..."></textarea>
+    </div>
+
+    <div class="frage">
+      <div class="nr">Frage 2</div>
+      <p>Warum bist du angetreten – was ist deine Vision?</p>
+      <div class="hint">Nicht was du verkaufen willst, sondern was du wirklich verändern möchtest.</div>
+      <textarea class="antwort-feld" id="antwort2" placeholder="Schreib hier deine Antwort..."></textarea>
+    </div>
+
+    <div class="frage">
+      <div class="nr">Frage 3</div>
+      <p>Wen möchtest du damit erreichen?</p>
+      <div class="hint">Deine Zielgruppe – damit dein erster Schritt konkret wird und nicht ins Leere geht.</div>
+      <textarea class="antwort-feld" id="antwort3" placeholder="Schreib hier deine Antwort..."></textarea>
+    </div>
+    <button class="btn-pdf" onclick="downloadPDF()">📄 Meine Antworten als PDF speichern</button>
+
+  </div>
+
+  <!-- VISIONBOARD -->
+  <div class="vision-card">
+    <div class="card-eyebrow">Schritt 2 – In den ersten 14 Tagen</div>
+    <h2>Bau dein Visionboard 🎯</h2>
+    <p class="intro">Ein Visionboard ist ein Bild von deinem Ziel. Du sammelst Bilder, Fotos oder Sätze die zeigen wie dein Leben in 12 Monaten aussehen soll – und packst sie auf eine Seite. So bleibt dein Warum immer sichtbar, auch wenn es mal schwierig wird.</p>
+
+    <div class="vision-img-wrap">
+      <img src="https://vitarights-world.github.io/Start/visionboard.jpg" alt="Beispiel Visionboard">
+    </div>
+    <div class="vision-caption">✨ KI-erstelltes Beispielbild zur Inspiration – dein Visionboard muss nicht so aussehen</div>
+
+    <p style="font-size:13.5px; color:#C9D3E6; margin-bottom:14px; line-height:1.55;">Wähle den Weg der zu dir passt:</p>
+
+    <div class="vision-wege">
+      <div class="vision-weg">
+        <div class="weg-icon">✂️</div>
+        <div class="weg-body">
+          <strong>Ganz einfach – mit Papier</strong>
+          <p>Nimm ein A4-Blatt. Schreib dein Warum oben drauf. Kleb Bilder aus Zeitschriften, eigene Fotos oder handgeschriebene Sätze drunter. Foto machen – fertig.</p>
+        </div>
+      </div>
+      <div class="vision-weg">
+        <div class="weg-icon">💻</div>
+        <div class="weg-body">
+          <strong>Digital einfach – mit Canva</strong>
+          <p>Canva.com aufrufen, kostenlos anmelden, nach „Visionboard" suchen, eine Vorlage nehmen und eigene Bilder und Sätze einfügen. Etwa 20 Minuten.</p>
+        </div>
+      </div>
+      <div class="vision-weg">
+        <div class="weg-icon">✍️</div>
+        <div class="weg-body">
+          <strong>Ganz minimalistisch – drei Sätze</strong>
+          <p>Schreib einfach auf: „Mein Warum ist..." · „In 12 Monaten bin ich..." · „Das treibt mich an..." – Das ist auch ein Visionboard. Wirklich.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="vision-teilen">
+      <strong>Teile es mit uns 💛</strong>
+      Wenn du magst, teile dein Visionboard in unserer Team-Gruppe auf WhatsApp oder Telegram. Du musst nicht – aber es motiviert dich selbst und andere.
+    </div>
+  </div>
+
+  <!-- VITARIGHTS RESSOURCEN -->
+  <div class="card">
+    <div class="card-eyebrow">Schritt 3 – In den ersten 14 Tagen</div>
+    <h2>Nutze was Vitarights dir gibt</h2>
+
+    <div class="schritt">
+      <div class="schritt-num">1</div>
+      <div class="schritt-body">
+        <strong>Startertraining der Vitarights Akademie anmelden</strong>
+        <p>Findet alle zwei Wochen statt. Thema: Wie komme ich an Kontakte? Wie spreche ich Menschen an? Den Anmeldelink findest du im <a href="https://team.vitarights.de" target="_blank">Teamportal</a> unter „Training".</p>
+      </div>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-num">2</div>
+      <div class="schritt-body">
+        <strong>Produktpräsentation und -training besuchen</strong>
+        <p>Ebenfalls alle zwei Wochen. Hier lernst du die Produkte so kennen, dass du sicher und ehrlich darüber sprechen kannst. Termine im <a href="https://team.vitarights.de" target="_blank">Teamportal</a>.</p>
+      </div>
+    </div>
+
+    <div class="schritt">
+      <div class="schritt-num">3</div>
+      <div class="schritt-body">
+        <strong>Teamportal und Partnershop einmal durchklicken</strong>
+        <p><a href="https://team.vitarights.de" target="_blank">team.vitarights.de</a> · <a href="https://order.vitarights.de" target="_blank">order.vitarights.de</a><br>Einmal alles ansehen – das erspart dir viele Fragen später.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TEAM SOLARIS RESSOURCEN -->
+  <div class="card">
+    <div class="card-eyebrow">Schritt 4 – Deine Team-Ressourcen</div>
+    <h2>Alles was du brauchst – an einem Ort</h2>
+
+    <div class="schritt">
+      <div class="schritt-num">☀️</div>
+      <div class="schritt-body">
+        <strong>Team-Solaris-Seite</strong>
+        <p>Hier findest du alle Tools, Apps, Leitfäden und Videos deines Teams – von der Shop-Bestellung bis zum Promptgenerator. Lesezeichen setzen lohnt sich.</p>
+      </div>
+    </div>
+
+    <div class="link-row">
+      <a href="https://team-solaris.jimdosite.com/" target="_blank" class="link-pill">☀️ Team-Solaris-Seite öffnen</a>
+      <a href="https://team-solaris.jimdosite.com/dein-werkzeugkasten/" target="_blank" class="link-pill">🧰 Dein Werkzeugkasten</a>
+      <a href="https://team-solaris.jimdosite.com/deine-trainingsapps/" target="_blank" class="link-pill">📱 Trainings-Apps</a>
+    </div>
+
+    <div style="margin-top:16px; padding:13px 15px; background:var(--beige); border-radius:10px;">
+      <p style="font-size:13px; color:var(--text-muted); line-height:1.6;"><strong style="color:var(--navy);">Was du dort findest:</strong> Videos zur Shop-Bestellung · Werberichtlinien & HWG-Hinweise · Produktvideos · Erfolgsstories · WhatsApp & Telegram Gruppen-Links · Partnervertrag</p>
+    </div>
+  </div>
+
+  <!-- DEIN PERSÖNLICHER PLAN -->
+  
+
+  <!-- KURZFRAGEBOGEN AUFKLAPPBAR -->
+  <div class="card" id="fragebogenWrap">
+    <div class="card-eyebrow">Schritt 5 – Dein persönlicher Fragebogen</div>
+    <h2>Was brauchst du für deinen Start?</h2>
+    <p style="font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;">
+      Dein Förderer erstellt dir daraus einen individuellen Startplan.<br>
+      <strong style="color:var(--navy);">Du kannst ihn jetzt sofort ausfüllen oder erst nach den ersten 14 Tagen – beides ist richtig.</strong>
+    </p>
+
+    <div class="upline-box" id="foerdererBox" style="display:none; margin-bottom:16px;">
+      <p>Dein Förderer:</p>
+      <strong id="foerdererName"></strong>
+      <p id="foerdererKontakt" style="margin-top:6px; font-size:14px; color:var(--blue);"></p>
+    </div>
+
+    <button class="btn-aufklappen" id="btnAufklappen" onclick="toggleFragebogen()">
+      📋 Fragebogen aufklappen
+    </button>
+
+    <div id="fragebogenInhalt" style="display:none; margin-top:20px;">
+
+      <div class="frage-q">
+        <div class="frage-nr">1</div>
+        <div class="frage-body">
+          <p class="frage-text">Was beschreibt deinen Hintergrund am besten?</p>
+          <div class="choices" data-field="beruf">
+            <div class="choice" data-value="Tierberuf mit Gesundheitswissen">Tierberuf mit Gesundheitswissen</div>
+            <div class="choice" data-value="Trainer oder Coach">Trainer oder Coach</div>
+            <div class="choice" data-value="Gesundheitsberuf Mensch">Gesundheitsberuf Mensch</div>
+            <div class="choice" data-value="Interessiert an Gesundheitsthemen">Interessiert an Gesundheitsthemen</div>
+            <div class="choice" data-value="Was anderes" data-other="true">Was anderes</div>
+          </div>
+          <div id="beruf_detail_wrap" style="display:none; margin-top:12px;">
+            <input type="text" class="antwort-feld" id="beruf_detail" placeholder="Beschreib kurz genauer – z. B. Tierheilpraktikerin mit Fokus Darmgesundheit, Physiotherapeut, Yogalehrerin ..." style="min-height:auto; padding:10px 14px;">
+          </div>
+
+          <!-- Folgefrage: Kundenkreis -->
+          <div id="kundenkreisFrage" style="margin-top:16px; display:none;">
+            <p class="frage-text" style="font-size:14.5px; margin-bottom:10px;">Hast du bereits Menschen in deinem Umfeld, die zur Vitarights-Zielgruppe passen?</p>
+            <div class="choices" data-field="kundenkreis">
+              <div class="choice" data-value="Ja – ich habe einen aktiven Kundenstamm mit passendem Thema">Ja – aktiver Kundenstamm mit passendem Thema</div>
+              <div class="choice" data-value="Ja – aber eher lose Kontakte, kein fester Kundenstamm">Ja – lose Kontakte, kein fester Kundenstamm</div>
+              <div class="choice" data-value="Nein – muss erst eine passende Zielgruppe aufbauen">Nein – muss Zielgruppe erst aufbauen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">2</div>
+        <div class="frage-body">
+          <p class="frage-text">Warum startest du mit Vitarights?</p>
+          <div class="choices" data-field="grund">
+            <div class="choice" data-value="Dazuverdienen neben dem Hauptberuf">Dazuverdienen neben dem Hauptberuf</div>
+            <div class="choice" data-value="Haupteinkommen aufbauen">Haupteinkommen aufbauen</div>
+            <div class="choice" data-value="Menschen helfen und nebenbei verdienen">Menschen helfen und nebenbei verdienen</div>
+            <div class="choice" data-value="Noch unsicher, schaue es mir an">Noch unsicher, schaue es mir an</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">3</div>
+        <div class="frage-body">
+          <p class="frage-text">Wie viele Stunden pro Woche kannst du realistisch investieren?</p>
+          <div class="choices" data-field="zeit">
+            <div class="choice" data-value="1–3 Stunden">1–3 Stunden</div>
+            <div class="choice" data-value="4–8 Stunden">4–8 Stunden</div>
+            <div class="choice" data-value="Mehr als 8 Stunden">Mehr als 8 Stunden</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">4</div>
+        <div class="frage-body">
+          <p class="frage-text">Wen möchtest du ansprechen?</p>
+          <div class="choices multi" data-field="zielgruppe">
+            <div class="choice" data-value="Tierhalter">Tierhalter</div>
+            <div class="choice" data-value="Menschen mit Gesundheitsthemen">Menschen mit Gesundheitsthemen</div>
+            <div class="choice" data-value="Fachleute im Gesundheitsbereich">Fachleute im Gesundheitsbereich</div>
+            <div class="choice" data-value="Noch keine Idee">Noch keine Idee</div>
+            <div class="choice" data-value="Andere" data-other-zg="true">Andere</div>
+          </div>
+          <input type="text" class="antwort-feld" id="zielgruppe_sonst" placeholder="Welche Zielgruppe?" style="margin-top:10px; min-height:auto; padding:10px 14px; display:none;">
+          <div class="multi-hint">Mehrfachauswahl möglich</div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">5</div>
+        <div class="frage-body">
+          <p class="frage-text">Wie groß ist dein bestehendes Netzwerk?</p>
+          <div class="choices" data-field="netzwerk">
+            <div class="choice" data-value="Klein – unter 100 Menschen">Klein – unter 100</div>
+            <div class="choice" data-value="Mittel – 100 bis 500 Menschen">Mittel – 100 bis 500</div>
+            <div class="choice" data-value="Groß – 500 bis 2.000 Menschen">Groß – 500 bis 2.000</div>
+            <div class="choice" data-value="Sehr groß – über 2.000 Menschen">Sehr groß – über 2.000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">6</div>
+        <div class="frage-body">
+          <p class="frage-text">Welche Kanäle nutzt du bereits aktiv?</p>
+          <div class="choices multi" data-field="kanaele">
+            <div class="choice" data-value="Facebook">Facebook</div>
+            <div class="choice" data-value="Instagram">Instagram</div>
+            <div class="choice" data-value="WhatsApp">WhatsApp</div>
+            <div class="choice" data-value="YouTube">YouTube</div>
+            <div class="choice" data-value="Newsletter / E-Mail-Liste">Newsletter / E-Mail</div>
+            <div class="choice" data-value="Eigene Website oder Blog">Website / Blog</div>
+            <div class="choice" data-value="Keinen">Noch keinen</div>
+          </div>
+          <div class="multi-hint">Mehrfachauswahl möglich</div>
+
+          <!-- Folgefragen Reichweite -->
+          <div id="reichweiteFragen" style="margin-top:16px; display:none;">
+            <p class="frage-text" style="font-size:14.5px; margin-bottom:10px;">Wie groß ist deine Reichweite auf deinem stärksten Kanal?</p>
+            <div class="choices" data-field="reichweite">
+              <div class="choice" data-value="Gerade am Aufbauen – unter 100 Kontakte">Gerade am Aufbauen – unter 100</div>
+              <div class="choice" data-value="Klein aber fein – 100 bis 500">Klein aber fein – 100 bis 500</div>
+              <div class="choice" data-value="Gut aufgestellt – 500 bis 2.000">Gut aufgestellt – 500 bis 2.000</div>
+              <div class="choice" data-value="Starke Reichweite – über 2.000">Starke Reichweite – über 2.000</div>
+            </div>
+
+            <p class="frage-text" style="font-size:14.5px; margin-top:14px; margin-bottom:10px;">Hast du bereits eine eigene Gruppe oder Community?</p>
+            <div class="choices" data-field="gruppe">
+              <div class="choice" data-value="Ja – mit aktiven Mitgliedern">Ja – aktiv und lebendig</div>
+              <div class="choice" data-value="Ja – aber noch wenig Aktivität">Ja – aber noch ruhig</div>
+              <div class="choice" data-value="Nein – noch nicht">Nein – noch nicht</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">7</div>
+        <div class="frage-body">
+          <p class="frage-text">Wie gehst du am liebsten auf Menschen zu?</p>
+          <div class="choices" data-field="ansprache">
+            <div class="choice" data-value="Persönlich – Gespräche, Treffen, Veranstaltungen">Persönlich – Gespräche, Treffen, Veranstaltungen</div>
+            <div class="choice" data-value="Online – Social Media, Gruppen, Nachrichten">Online – Social Media, Gruppen, Nachrichten</div>
+            <div class="choice" data-value="Beides – je nach Situation">Beides – je nach Situation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">8</div>
+        <div class="frage-body">
+          <p class="frage-text">Was bremst dich aktuell am stärksten?</p>
+          <div class="choices multi" data-field="bremse">
+            <div class="choice" data-value="Unsicherheit und Angst">Unsicherheit</div>
+            <div class="choice" data-value="Zu wenig Zeit">Zu wenig Zeit</div>
+            <div class="choice" data-value="Technik und Online">Technik</div>
+            <div class="choice" data-value="Sichtbarkeit und mich zeigen">Sichtbarkeit</div>
+            <div class="choice" data-value="Gespräche zum Abschluss bringen">Abschluss im Gespräch</div>
+            <div class="choice" data-value="Noch nichts bremst mich">Nichts – ich starte durch</div>
+          </div>
+          <div class="multi-hint">Mehrfachauswahl möglich</div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">9</div>
+        <div class="frage-body">
+          <p class="frage-text">Welches Tempo passt zu dir?</p>
+          <div class="choices" data-field="tempo">
+            <div class="choice" data-value="Langsam und sicher – Schritt für Schritt">Langsam und sicher</div>
+            <div class="choice" data-value="Moderat – stabiler Aufbau">Moderat – stabiler Aufbau</div>
+            <div class="choice" data-value="Zügig – ich will schnell Ergebnisse">Zügig – schnelle Ergebnisse</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frage-q">
+        <div class="frage-nr">10</div>
+        <div class="frage-body">
+          <p class="frage-text">Wo möchtest du in 12 Monaten stehen?</p>
+          <textarea class="antwort-feld" id="antwort_ziel" placeholder="Ein Satz reicht völlig – was ist dein Wunschbild?"></textarea>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="downloadFragebogenPDF()" style="margin-top:8px;">
+        📄 Fragebogen als PDF speichern &amp; an Förderer senden
+      </button>
+
+    </div>
+  </div>
+
+  <!-- KEINE ÜBERFORDERUNG -->
+  <div class="card" style="background:var(--blue-light); border-color:var(--blue);">
+    <p style="font-size:14px; color:var(--navy); line-height:1.65; text-align:center;">
+      <strong>Wichtig:</strong> Du musst nicht alles auf einmal tun.<br>
+      Ein Schritt nach dem anderen. Dein Förderer begleitet dich.<br>
+      Und wir alle haben mal hier angefangen. 💙
+    </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  Team Solaris · Vitarights · <a href="https://team.vitarights.de" style="color:var(--blue);">team.vitarights.de</a>
+</div>
+
+
+<script>
+(function(){
+  function decode(str){
+    try{ return decodeURIComponent(atob(str)); }
+    catch(e){ return ''; }
+  }
+  var params = new URLSearchParams(window.location.hash.replace('#',''));
+  var name = decode(params.get('n') || '');
+  var kontakt = decode(params.get('k') || '');
+  if(name){
+    document.getElementById('foerdererName').textContent = name;
+    document.getElementById('foerdererKontakt').textContent = kontakt || '';
+    document.getElementById('foerdererBox').style.display = 'block';
+    document.getElementById('foerdererFallback').style.display = 'none';
+  }
+})();
+</script>
+
+
+<script>
+function downloadPDF(){
+  var jsPDFCtor = window.jspdf ? window.jspdf.jsPDF : null;
+  if(!jsPDFCtor){
+    alert('PDF-Bibliothek lädt noch – bitte kurz warten und nochmal versuchen.');
+    return;
+  }
+
+  var a1 = document.getElementById('antwort1').value.trim() || '(keine Antwort eingetragen)';
+  var a2 = document.getElementById('antwort2').value.trim() || '(keine Antwort eingetragen)';
+  var a3 = document.getElementById('antwort3').value.trim() || '(keine Antwort eingetragen)';
+
+  // Förderer aus URL lesen
+  function decode(str){ try{ return decodeURIComponent(atob(str)); }catch(e){ return ''; } }
+  var params = new URLSearchParams(window.location.hash.replace('#',''));
+  var foerdererName = decode(params.get('n') || '') || 'Dein Förderer';
+  var foerdererKontakt = decode(params.get('k') || '');
+
+  var doc = new jsPDFCtor({unit:'pt', format:'a4'});
+  var pageW = doc.internal.pageSize.getWidth();
+  var pageH = doc.internal.pageSize.getHeight();
+  var navy = [30,45,90];
+  var blue = [74,127,165];
+  var muted = [92,107,138];
+  var beige = [232,226,214];
+  var marginX = 48;
+  var y = 0;
+
+  function addHeader(){
+    doc.setFillColor(navy[0],navy[1],navy[2]);
+    doc.rect(0,0,pageW,80,'F');
+    doc.setTextColor(255,255,255);
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(16);
+    doc.text('Team Solaris · Vitarights', marginX, 36);
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(11);
+    doc.setTextColor(201,211,230);
+    doc.text('Mein persönlicher Start – drei Antworten', marginX, 54);
+    doc.text(new Date().toLocaleDateString('de-DE'), pageW - marginX, 54, {align:'right'});
+    y = 108;
+  }
+
+  function ensureSpace(h){
+    if(y + h > pageH - 48){ doc.addPage(); addHeader(); }
+  }
+
+  function addFrage(nr, frage, antwort){
+    ensureSpace(120);
+    // Frage
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(10);
+    doc.setTextColor(blue[0],blue[1],blue[2]);
+    doc.text('FRAGE ' + nr, marginX, y);
+    y += 14;
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(12.5);
+    doc.setTextColor(navy[0],navy[1],navy[2]);
+    var frageLines = doc.splitTextToSize(frage, pageW - marginX*2);
+    doc.text(frageLines, marginX, y);
+    y += frageLines.length * 15 + 8;
+    // Antwort-Box
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(11);
+    doc.setTextColor(30,30,30);
+    var antwortLines = doc.splitTextToSize(antwort, pageW - marginX*2 - 20);
+    var boxH = antwortLines.length * 13 + 16;
+    ensureSpace(boxH + 10);
+    doc.setFillColor(beige[0],beige[1],beige[2]);
+    doc.roundedRect(marginX, y, pageW - marginX*2, boxH, 6, 6, 'F');
+    doc.text(antwortLines, marginX + 10, y + 12);
+    y += boxH + 20;
+  }
+
+  addHeader();
+
+  // Intro
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(11);
+  doc.setTextColor(muted[0],muted[1],muted[2]);
+  var introLines = doc.splitTextToSize('Diese drei Antworten sind dein persönlicher Anker für den Start mit Vitarights. Teile dieses Dokument gern mit deinem Förderer.', pageW - marginX*2);
+  doc.text(introLines, marginX, y);
+  y += introLines.length * 14 + 24;
+
+  addFrage(1, 'Was hat dich am Beosigner überzeugt?', a1);
+  addFrage(2, 'Warum bist du angetreten – was ist deine Vision?', a2);
+  addFrage(3, 'Wen möchtest du damit erreichen?', a3);
+
+  // Förderer-Box
+  ensureSpace(80);
+  doc.setFillColor(navy[0],navy[1],navy[2]);
+  doc.roundedRect(marginX, y, pageW - marginX*2, 60, 8, 8, 'F');
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(10);
+  doc.setTextColor(201,211,230);
+  doc.text('DEIN FÖRDERER', marginX + 16, y + 18);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(12);
+  doc.setTextColor(255,255,255);
+  doc.text(foerdererName, marginX + 16, y + 34);
+  if(foerdererKontakt){
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(10.5);
+    doc.setTextColor(201,211,230);
+    doc.text(foerdererKontakt, marginX + 16, y + 48);
+  }
+
+  doc.save('mein-vitarights-start.pdf');
+}
+</script>
+
+
+<script>
+// Aufklappen/Zuklappen
+function toggleFragebogen(){
+  var inhalt = document.getElementById('fragebogenInhalt');
+  var btn = document.getElementById('btnAufklappen');
+  var visible = inhalt.style.display !== 'none';
+  inhalt.style.display = visible ? 'none' : 'block';
+  btn.textContent = visible ? '📋 Fragebogen aufklappen' : '📋 Fragebogen zuklappen';
+  if(!visible){
+    inhalt.scrollIntoView({behavior:'smooth', block:'start'});
+    wireChoices();
+  }
+}
+
+// Choices verdrahten
+var choicesWired = false;
+function wireChoices(){
+  if(choicesWired) return;
+  choicesWired = true;
+  document.querySelectorAll('#fragebogenInhalt .choices').forEach(function(group){
+    var multi = group.classList.contains('multi');
+    var field = group.getAttribute('data-field');
+    group.querySelectorAll('.choice').forEach(function(opt){
+      opt.addEventListener('click', function(){
+        if(multi){
+          opt.classList.toggle('selected');
+        } else {
+          group.querySelectorAll('.choice').forEach(function(o){ o.classList.remove('selected'); });
+          opt.classList.add('selected');
+        }
+        // Reichweite-Fragen zeigen wenn mindestens ein Kanal gewählt
+        if(field === 'kanaele'){
+          var anySelected = group.querySelectorAll('.choice.selected').length > 0;
+          // nach Toggle prüfen
+          setTimeout(function(){
+            var selected = group.querySelectorAll('.choice.selected').length;
+            var keiner = group.querySelector('.choice.selected[data-value="Keinen"]');
+            var reichweite = document.getElementById('reichweiteFragen');
+            if(reichweite){
+              reichweite.style.display = (selected > 0 && !keiner) ? 'block' : 'none';
+            }
+          }, 50);
+        }
+        // Freitextfeld für Zielgruppe "Andere"
+        if(field === 'zielgruppe'){
+          var zgSonst = document.getElementById('zielgruppe_sonst');
+          if(zgSonst){
+            var anyAndere = group.querySelectorAll('.choice[data-other-zg="true"].selected').length > 0;
+            setTimeout(function(){
+              var andereSelected = group.querySelectorAll('.choice[data-other-zg="true"].selected').length > 0;
+              zgSonst.style.display = andereSelected ? 'block' : 'none';
+            }, 50);
+          }
+        }
+        // Detailfeld bei jeder Berufswahl zeigen
+        if(field === 'beruf'){
+          var detailWrap = document.getElementById('beruf_detail_wrap');
+          if(detailWrap){
+            detailWrap.style.display = 'block';
+            var detailInput = document.getElementById('beruf_detail');
+            if(detailInput){
+              // Platzhalter je nach Wahl anpassen
+              var val = opt.getAttribute('data-value');
+              if(val === 'Tierberuf mit Gesundheitswissen'){
+                detailInput.placeholder = 'z. B. Tierheilpraktikerin, Fokus Darmgesundheit bei Hunden';
+              } else if(val === 'Trainer oder Coach'){
+                detailInput.placeholder = 'z. B. Hundetrainerin, Yogalehrerin, Fitnesstrainerin';
+              } else if(val === 'Gesundheitsberuf Mensch'){
+                detailInput.placeholder = 'z. B. Heilpraktikerin, Physiotherapeutin, Ernährungsberaterin';
+              } else if(val === 'Interessiert an Gesundheitsthemen'){
+                detailInput.placeholder = 'z. B. Seit Jahren mit Naturheilkunde beschäftigt, eigene Erfahrungen mit Darmgesundheit';
+              } else {
+                detailInput.placeholder = 'Beschreib kurz was du machst oder was dich ausmacht';
+              }
+            }
+          }
+        }
+        // Kundenkreis-Folgefrage zeigen wenn Beruf mit Kundenpotenzial
+        if(field === 'beruf'){
+          var val = opt.getAttribute('data-value');
+          var mitKunden = val.indexOf('Tierberuf mit therapeutischem') !== -1 ||
+                          val.indexOf('Tierberuf ohne therapeutischen') !== -1 ||
+                          val.indexOf('Gesundheitsberuf Mensch') !== -1;
+          var folgeFrage = document.getElementById('kundenkreisFrage');
+          if(folgeFrage){
+            folgeFrage.style.display = mitKunden ? 'block' : 'none';
+            // Auswahl zurücksetzen wenn ausgeblendet
+            if(!mitKunden){
+              folgeFrage.querySelectorAll('.choice').forEach(function(o){ o.classList.remove('selected'); });
+            }
+          }
+        }
+      });
+    });
+  });
+}
+
+// Antworten sammeln
+function getChoiceVal(field){
+  var sel = document.querySelectorAll('[data-field="' + field + '"] .choice.selected');
+  var vals = [];
+  sel.forEach(function(el){ vals.push(el.getAttribute('data-value')); });
+  return vals.join(', ') || '–';
+}
+
+// Fragebogen-PDF erstellen
+function downloadFragebogenPDF(){
+  var jsPDFCtor = window.jspdf ? window.jspdf.jsPDF : null;
+  if(!jsPDFCtor){
+    alert('PDF-Bibliothek lädt noch – bitte kurz warten und nochmal versuchen.');
+    return;
+  }
+
+  function decode(str){ try{ return decodeURIComponent(atob(str)); }catch(e){ return ''; } }
+  var params = new URLSearchParams(window.location.hash.replace('#',''));
+  var foerdererName = decode(params.get('n') || '') || 'Dein Förderer';
+  var foerdererKontakt = decode(params.get('k') || '');
+
+  var fragen = [
+    ['Hintergrund', getChoiceVal('beruf') + (document.getElementById('beruf_detail') && document.getElementById('beruf_detail').value ? ' – ' + document.getElementById('beruf_detail').value : '') + (document.getElementById('beruf_sonst') && document.getElementById('beruf_sonst').value ? ' – ' + document.getElementById('beruf_sonst').value : '')],
+    ['Bestehender Kundenkreis', getChoiceVal('kundenkreis')],
+    ['Reichweite stärkster Kanal', getChoiceVal('reichweite')],
+    ['Eigene Gruppe / Community', getChoiceVal('gruppe')],
+    ['Grund für den Start', getChoiceVal('grund')],
+    ['Zeit pro Woche', getChoiceVal('zeit')],
+    ['Zielgruppe', getChoiceVal('zielgruppe') + (document.getElementById('zielgruppe_sonst') && document.getElementById('zielgruppe_sonst').value ? ' – ' + document.getElementById('zielgruppe_sonst').value : '')],
+    ['Netzwerkgröße', getChoiceVal('netzwerk')],
+    ['Aktive Kanäle', getChoiceVal('kanaele')],
+    ['Bevorzugte Ansprache', getChoiceVal('ansprache')],
+    ['Größte Bremse', getChoiceVal('bremse')],
+    ['Gewünschtes Tempo', getChoiceVal('tempo')],
+    ['Wunschbild in 12 Monaten', document.getElementById('antwort_ziel').value.trim() || '–']
+  ];
+
+  // Startfragen dazuholen
+  var a1 = document.getElementById('antwort1') ? document.getElementById('antwort1').value.trim() : '';
+  var a2 = document.getElementById('antwort2') ? document.getElementById('antwort2').value.trim() : '';
+  var a3 = document.getElementById('antwort3') ? document.getElementById('antwort3').value.trim() : '';
+
+  var doc = new jsPDFCtor({unit:'pt', format:'a4'});
+  var pageW = doc.internal.pageSize.getWidth();
+  var pageH = doc.internal.pageSize.getHeight();
+  var navy = [30,45,90];
+  var blue = [74,127,165];
+  var muted = [92,107,138];
+  var beige = [232,226,214];
+  var marginX = 48;
+  var y = 0;
+
+  function addHeader(){
+    doc.setFillColor(navy[0],navy[1],navy[2]);
+    doc.rect(0,0,pageW,80,'F');
+    doc.setTextColor(255,255,255);
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(16);
+    doc.text('Team Solaris · Vitarights', marginX, 36);
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(11);
+    doc.setTextColor(201,211,230);
+    doc.text('Persönlicher Startplan – Fragebogen', marginX, 54);
+    doc.text(new Date().toLocaleDateString('de-DE'), pageW - marginX, 54, {align:'right'});
+    y = 108;
+  }
+
+  function ensureSpace(h){
+    if(y + h > pageH - 48){ doc.addPage(); addHeader(); }
+  }
+
+  function addRow(label, wert){
+    var labelW = 180;
+    var wertW = pageW - marginX*2 - labelW - 10;
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(9.5);
+    doc.setTextColor(muted[0],muted[1],muted[2]);
+    var labelLines = doc.splitTextToSize(label, labelW);
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(10.5);
+    doc.setTextColor(30,30,30);
+    var wertLines = doc.splitTextToSize(wert, wertW);
+    var rowH = Math.max(labelLines.length, wertLines.length) * 13 + 8;
+    ensureSpace(rowH);
+    doc.text(labelLines, marginX, y);
+    doc.text(wertLines, marginX + labelW, y);
+    y += rowH;
+  }
+
+  function addSekTitle(title){
+    ensureSpace(30);
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(12);
+    doc.setTextColor(navy[0],navy[1],navy[2]);
+    doc.text(title, marginX, y);
+    y += 6;
+    doc.setDrawColor(beige[0],beige[1],beige[2]);
+    doc.line(marginX, y+2, pageW-marginX, y+2);
+    y += 16;
+  }
+
+  addHeader();
+
+  // Startfragen (falls ausgefüllt)
+  if(a1 || a2 || a3){
+    addSekTitle('Meine drei Startfragen');
+    if(a1) addRow('Was hat mich überzeugt?', a1);
+    if(a2) addRow('Meine Vision', a2);
+    if(a3) addRow('Meine Zielgruppe', a3);
+    y += 10;
+  }
+
+  addSekTitle('Mein Profil für den Startplan');
+  fragen.forEach(function(f){ addRow(f[0], f[1]); });
+  y += 16;
+
+  // Förderer-Box
+  ensureSpace(70);
+  doc.setFillColor(navy[0],navy[1],navy[2]);
+  doc.roundedRect(marginX, y, pageW - marginX*2, 60, 8, 8, 'F');
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(9.5);
+  doc.setTextColor(201,211,230);
+  doc.text('MEIN FÖRDERER', marginX + 16, y + 18);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(12);
+  doc.setTextColor(255,255,255);
+  doc.text(foerdererName, marginX + 16, y + 34);
+  if(foerdererKontakt){
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(10.5);
+    doc.setTextColor(201,211,230);
+    doc.text(foerdererKontakt, marginX + 16, y + 50);
+  }
+
+  doc.save('vitarights-startplan-fragebogen.pdf');
+}
+</script>
+
+</body>
+</html>
